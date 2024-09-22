@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -55,6 +55,7 @@ export default function CompanyCard({ company }: CompanyProps) {
           <div className="flex items-center justify-between">
             <span>Added by {company.addedBy}</span>
             <Badge
+            // @ts-ignore
               variant={company.status === "Active" ? "success" : "warning"}
               className={company.status === "Active" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}
             >

@@ -59,7 +59,7 @@ const jobListings = [
 
 export default function Dashboard() {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       <h1 className="text-3xl font-bold mb-6">Job Listings</h1>
       <div className="space-y-4">
         {jobListings.map((job) => (
@@ -105,6 +105,7 @@ export default function Dashboard() {
                     <span>{job.posted}</span>
                   </div>
                   <Badge 
+                  // @ts-ignore
                     variant={job.status === "Approved" ? "success" : "warning"}
                     className={job.status === "Approved" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}
                   >

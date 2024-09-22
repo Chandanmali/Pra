@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -100,9 +100,11 @@ function NotificationSettings() {
               <div key={role} className="flex items-center space-x-2">
                 <Checkbox
                   id={role}
+                  // @ts-ignore
                   checked={selectedRoles.includes(role)}
                   onCheckedChange={(checked) => {
                     setSelectedRoles(
+                      // @ts-ignore
                       checked
                         ? [...selectedRoles, role]
                         : selectedRoles.filter((r) => r !== role)

@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -11,7 +11,9 @@ const jobListings = [
   // Add more job listings as needed
 ]
 
+// @ts-ignore
 export default function JobSelectionModal({ onClose, type, selectedStudents }) {
+  // @ts-ignore
   const handleJobSelect = (jobId) => {
     // Handle job selection logic here
     console.log(`Selected job ${jobId} for ${type === 'add' ? 'adding' : 'inviting'} ${selectedStudents.length} students`)

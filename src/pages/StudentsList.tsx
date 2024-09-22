@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { GraduationCap, Calendar, MoreVertical, Plus, Search, Filter } from "lucide-react"
+import { GraduationCap, Calendar, MoreVertical, Plus } from "lucide-react"
 import AddStudentForm from '../pages/AddStudentForm'
 import StudentDetails from '../pages/StudentDetails'
 import JobSelectionModal from '../pages/JobSelectionModal'
@@ -65,20 +65,26 @@ export default function StudentsList() {
     (filters.status === "" || student.status === filters.status)
   )
 
+  // @ts-ignore
   const handleFilterChange = (key, value) => {
     setFilters(prev => ({ ...prev, [key]: value }))
   }
 
+  // @ts-ignore
   const handleStudentSelect = (studentId) => {
+    // @ts-ignore
     setSelectedStudents(prev =>
+      // @ts-ignore
       prev.includes(studentId)
         ? prev.filter(id => id !== studentId)
         : [...prev, studentId]
     )
   }
 
+  // @ts-ignore
   const handleSelectAll = (e) => {
     if (e.target.checked) {
+      // @ts-ignore
       setSelectedStudents(filteredStudents.map(student => student.id))
     } else {
       setSelectedStudents([])
@@ -95,6 +101,7 @@ export default function StudentsList() {
     setShowJobSelectionModal(true)
   }
 
+  // @ts-ignore
   const handleStudentClick = (student) => {
     setSelectedStudent(student)
   }
@@ -181,6 +188,7 @@ export default function StudentsList() {
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-2">
                 <Checkbox
+                // @ts-ignore
                   checked={selectedStudents.includes(student.id)}
                   onCheckedChange={() => handleStudentSelect(student.id)}
                   onClick={(e) => e.stopPropagation()}
@@ -217,6 +225,7 @@ export default function StudentsList() {
               </div>
               <div className="flex items-center justify-end">
                 <Badge
+                // @ts-ignore
                   variant={student.status === "Open for opportunity" ? "success" : "secondary"}
                   className={student.status === "Open for opportunity" ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"}
                 >

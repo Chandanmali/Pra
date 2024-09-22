@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import CompaniesList from '../pages/CompaniesList';
 
 function CompanyFinalPage() {

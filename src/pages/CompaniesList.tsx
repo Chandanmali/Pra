@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import CompanyCard from '../pages/CompanyCard';
 import CompanySearch from '../pages/CompanySearch';
 import AddCompanyForm from '../pages/AddCompanyForm';
